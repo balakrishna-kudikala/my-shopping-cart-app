@@ -47,10 +47,4 @@ public class CartServiceImpl implements CartService {
         }
         return cart.getTotalPrice() - discountedPrice;
     }
-    public static void main(String a[]) throws Exception {
-        Cart cart = new Cart();
-        cart.setTotalPrice(6000);
-        double d = new CartServiceImpl().getFinalPrice(cart, CustomerType.REGULAR.name());
-        System.out.println("discounted price: "+ d);
-    }
 }
